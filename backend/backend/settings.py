@@ -25,7 +25,7 @@ SECRET_KEY = 'gif^fx-^dt5*qox)4^f)z$ryjuv_r8p!%^j)19y)es8r^qx%gd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['demo-django-celery.enjambrelab.com.ar']
 
 
 # Application definition
