@@ -19,4 +19,4 @@ def demo(request):
 
 def crearTarea(request):
     tarea = tasks.add.delay(2, 3)
-    return HttpResponse("Creando tarea" + str(tarea))
+    return HttpResponse("Creando tarea: " + str(tarea))
