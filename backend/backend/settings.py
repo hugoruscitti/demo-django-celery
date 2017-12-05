@@ -25,7 +25,7 @@ SECRET_KEY = 'gif^fx-^dt5*qox)4^f)z$ryjuv_r8p!%^j)19y)es8r^qx%gd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['demo-django-celery.enjambrelab.com.ar']
+ALLOWED_HOSTS = ['demo-django-celery.enjambrelab.com.ar', 'localhost']
 
 
 # Application definition
@@ -121,8 +121,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = 'staticfiles'
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_BROKER_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379')
+CELERY_RESULT_BACKEND = os.environ.get('REDIS_URL', 'redis://localhost:6379')
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
