@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 backend/db.sqlite3
+backend/dump.rdb
 
 # C extensions
 *.so
